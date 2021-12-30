@@ -8,10 +8,6 @@ class TimerService extends ChangeNotifier{
 
     int seconds;
     Timer? timer;
-
-
-
-
     TimerService({required this.seconds});
 
   void start(){
