@@ -1,0 +1,2 @@
+/Users/briansurface/StudioProjects/stoppage_lite_flutter/android/app/.cxx/Debug/206v4x65/x86/CMakeFiles/rebuild_cache.dir
+/Users/briansurface/StudioProjects/stoppage_lite_flutter/android/app/.cxx/Debug/206v4x65/x86/CMakeFiles/edit_cache.dir

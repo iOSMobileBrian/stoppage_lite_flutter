@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "/Users/briansurface/Developer/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/briansurface/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/Users/briansurface/StudioProjects/stoppage_lite_flutter/android/app/.cxx/Debug/206v4x65/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/briansurface/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/Users/briansurface/StudioProjects/stoppage_lite_flutter/android/app/.cxx/Debug/206v4x65/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {},
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/briansurface/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/briansurface/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}
