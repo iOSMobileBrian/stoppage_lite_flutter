@@ -19,7 +19,7 @@ class ElevBtn extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(timeLabel, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),)),
         style: ElevatedButton.styleFrom(
-          primary: primary,
+          backgroundColor: primary,
           elevation: 2.0,
           shape: const CircleBorder(
             side: BorderSide(color: Colors.white),

@@ -5,6 +5,8 @@ import 'package:stoppage_lite/Services/timer_service.dart';
 import 'package:stoppage_lite/Widgets/elev_btn.dart';
 
 class TimerPage extends StatefulWidget {
+  const TimerPage({Key? key}) : super(key: key);
+
 
 
   @override
@@ -39,8 +41,7 @@ class _TimerPageState extends State<TimerPage> {
             Text('${minLeft.toString().padLeft(2,"0")}:${secondsLeft.toString().padLeft(2, "0")}', style: const TextStyle(color: Colors.white, fontSize: 70, fontWeight: FontWeight.bold),),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                shape: const CircleBorder(),
-                primary: Colors.transparent,
+                shape: const CircleBorder(), backgroundColor: Colors.transparent,
               ),
                 onPressed:(){
                 setState(() {
