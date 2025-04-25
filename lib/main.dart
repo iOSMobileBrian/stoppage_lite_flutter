@@ -4,12 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:stoppage_lite/Services/timer_service.dart';
 
 void main() {
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(create: (context) => TimerService(seconds: 60)),
-    ],
-      child: const MyApp()));
-
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (context) => TimerService(seconds: 60)),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -28,4 +25,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
