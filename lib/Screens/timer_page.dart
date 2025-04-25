@@ -23,6 +23,7 @@ class _TimerPageState extends State<TimerPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        toolbarHeight: 50.0,
         title: const Text('Stoppage'),
         leading: IconButton(
           iconSize: 40,
