@@ -24,6 +24,7 @@ class _TimerPageState extends State<TimerPage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         toolbarHeight: 50.0,
+        actions: [IconButton(onPressed: ()=> vm.playAudioForThreeSeconds(), icon: const Icon(Icons.access_alarms))],
         title: const Text('Stoppage'),
         leading: IconButton(
           iconSize: 40,
