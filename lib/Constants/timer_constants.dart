@@ -4,6 +4,8 @@ const String kFiveMinutes = '5:00';
 const String kThreeMinutes = '3:00';
 const String kOneMinutes = '1:00';
 const String kThirtySeconds = '0:30';
+const warningAudioPath = 'assets/audio/Warning Siren.mp3';
+const hornAudioPath = 'assets/audio/Air Horn.mp3';
 const Icon play = Icon(
   Icons.play_circle_fill,
   size: 90,

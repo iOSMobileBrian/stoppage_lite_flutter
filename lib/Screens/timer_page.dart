@@ -24,7 +24,7 @@ class _TimerPageState extends State<TimerPage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         toolbarHeight: 50.0,
-        actions: [IconButton(onPressed: ()=> vm.playAudioForThreeSeconds(), icon: const Icon(Icons.access_alarms))],
+        actions: [IconButton(onPressed: ()=> vm.playAudioForThreeSeconds(warningAudioPath), icon: const Icon(Icons.warning, color: Colors.orange, size: 40,))],
         title: const Text('Stoppage'),
         leading: IconButton(
           iconSize: 40,
@@ -33,12 +33,12 @@ class _TimerPageState extends State<TimerPage> {
         ),
       ),
       body: Align(
-        alignment: Alignment.center,
+        alignment: Alignment.topCenter,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 50,
+              height: 40,
             ),
             Text(
               '${minLeft.toString().padLeft(2, "0")}:${secondsLeft.toString().padLeft(2, "0")}',
@@ -63,21 +63,19 @@ class _TimerPageState extends State<TimerPage> {
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: SafeArea(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevBtn(
-                        timeLabel: kFiveMinutes,
-                        onPress: () => setState(() {
-                              vm.addTime(300);
-                            }),
-                        primary: Colors.red),
-                    ElevBtn(timeLabel: kThreeMinutes, onPress: () => vm.addTime(180), primary: Colors.redAccent),
-                    ElevBtn(timeLabel: kOneMinutes, onPress: () => vm.addTime(60), primary: Colors.deepOrange),
-                    ElevBtn(timeLabel: kThirtySeconds, onPress: () => vm.addTime(30), primary: Colors.deepOrangeAccent),
-                  ],
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevBtn(
+                      timeLabel: kFiveMinutes,
+                      onPress: () => setState(() {
+                            vm.addTime(300);
+                          }),
+                      primary: Colors.red),
+                  ElevBtn(timeLabel: kThreeMinutes, onPress: () => vm.addTime(180), primary: Colors.redAccent),
+                  ElevBtn(timeLabel: kOneMinutes, onPress: () => vm.addTime(60), primary: Colors.deepOrange),
+                  ElevBtn(timeLabel: kThirtySeconds, onPress: () => vm.addTime(30), primary: Colors.deepOrangeAccent),
+                ],
               ),
             )
           ],

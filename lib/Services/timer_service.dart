@@ -1,6 +1,7 @@
 import 'dart:async';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:stoppage_lite/Constants/timer_constants.dart';
 
 class TimerService extends ChangeNotifier {
   int seconds;
@@ -16,6 +17,7 @@ class TimerService extends ChangeNotifier {
       } else {
         timer.cancel();
         notifyListeners();
+        playAudioForThreeSeconds(hornAudioPath);
       }
     });
   }
@@ -40,16 +42,10 @@ class TimerService extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> playAudioForThreeSeconds() async {
+  Future<void> playAudioForThreeSeconds(String audioPath) async {
     final player = AudioPlayer();
-
-    // Replace with your audio file path or URL
-    const audioPath = 'assets/audio/Warning Siren.mp3';
-
-    // Play the audio
-    await player.play(AssetSource(audioPath));
-
-    // Stop after 3 seconds
+    await player.setAudioSource(AudioSource.asset(audioPath));
+    await player.play();
     Timer(const Duration(seconds: 3), () {
       player.stop();
     });

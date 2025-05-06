@@ -11,6 +11,12 @@ class ElevBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPress,
+      style: ElevatedButton.styleFrom(
+          backgroundColor: primary,
+          elevation: 2.0,
+          shape: const CircleBorder(
+            side: BorderSide(color: Colors.white),
+          )),
       child: Container(
           width: 70,
           height: 70,
@@ -18,12 +24,6 @@ class ElevBtn extends StatelessWidget {
           child: Text(
             timeLabel,
             style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
-          )),
-      style: ElevatedButton.styleFrom(
-          backgroundColor: primary,
-          elevation: 2.0,
-          shape: const CircleBorder(
-            side: BorderSide(color: Colors.white),
           )),
     );
   }
