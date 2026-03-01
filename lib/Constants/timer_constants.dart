@@ -16,3 +16,17 @@ const Icon pause = Icon(
   size: 90,
   color: Colors.grey,
 );
+
+// SharedPreferences keys
+const String kChildProfilesKey = 'child_profiles';
+const String kTimeoutLogsKey = 'timeout_logs';
+
+// Avatar emoji options
+const List<String> kAvatarOptions = [
+  // Sports
+  '⚽', '🏀', '🏈', '⚾', '🎾', '🏐', '🏉', '🥅',
+  // Animals
+  '🐶', '🐱', '🐻', '🦁', '🐯', '🐸', '🐵', '🦊',
+  // Misc
+  '⭐', '🌈', '🔥', '💎', '🎵', '🚀', '🎯', '🏆',
+];
