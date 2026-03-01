@@ -6,7 +6,10 @@ import 'package:stoppage_lite/Constants/timer_constants.dart';
 class TimerService extends ChangeNotifier {
   int seconds;
   Timer? timer;
+  int _totalTimeSet = 0;
   TimerService({required this.seconds});
+
+  int get elapsedSeconds => _totalTimeSet - seconds;
 
   void start() {
     const milliSec = Duration(seconds: 1);
@@ -24,6 +27,7 @@ class TimerService extends ChangeNotifier {
 
   void addTime(int time) {
     seconds += time;
+    _totalTimeSet += time;
     notifyListeners();
   }
 
@@ -39,6 +43,7 @@ class TimerService extends ChangeNotifier {
     timer?.cancel();
     timer?.isActive == false;
     seconds = 0;
+    _totalTimeSet = 0;
     notifyListeners();
   }
 
