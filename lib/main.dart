@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:stoppage_lite/Screens/timer_page.dart';
 import 'package:provider/provider.dart';
 import 'package:stoppage_lite/Services/timer_service.dart';
+import 'package:stoppage_lite/Services/child_service.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final childService = ChildService();
+  await childService.loadData();
+
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => TimerService(seconds: 60)),
+    ChangeNotifierProvider.value(value: childService),
   ], child: const MyApp()));
 }
 
